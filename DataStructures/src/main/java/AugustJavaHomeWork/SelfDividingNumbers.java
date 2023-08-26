@@ -34,14 +34,5 @@ public class SelfDividingNumbers {
     }
 }
 
-/*
- * We define the same isSelfDividing function as before to check if a given number is self-dividing.
- * define a function called printSelfDividingNumbersInRange, which directly prints the self-dividing numbers found within the given range.
- * Inside the printSelfDividingNumbersInRange function, 
- * we loop through all the numbers in the range [left, right] and check if each number is self-dividing using the isSelfDividing function. 
- * If it is, we print the number to the console.
- * In the main function, we set the values of left and right as given in the example and call the printSelfDividingNumbersInRange 
- * function to print the self-dividing numbers in the given range.
- */
  
 
