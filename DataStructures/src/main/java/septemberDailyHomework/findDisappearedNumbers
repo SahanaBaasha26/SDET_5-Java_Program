@@ -1,0 +1,31 @@
+class Solution {
+    public List<Integer> findDisappearedNumbers(int[] nums) {
+          List<Integer> disappearedNumbers = new ArrayList<>();
+        int n = nums.length;
+        
+        
+        Map<Integer, Integer> numCounts = new HashMap<>();
+        for (int num : nums) {
+            numCounts.put(num, numCounts.getOrDefault(num, 0) + 1);
+        }
+
+        
+        for (int i = 1; i <= n; i++) {
+            if (!numCounts.containsKey(i)) {
+                disappearedNumbers.add(i);
+            }
+        }
+        
+        return disappearedNumbers;
+    }
+} 
+
+/*
+1)Create a list to store the disappeared numbers
+2)Get the length of the input array
+3)Create a HashMap to count the frequency of each number in the input array
+4)Loop through the input array to populate the numCounts HashMap
+5)Loop from 1 to n (inclusive) to find the disappeared numbers
+      a)If the current number 'i' is not in the numCounts HashMap, add it to the disappearedNumbers list
+6)Return the list of disappeared numbers
+*/
